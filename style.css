@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root{
+	--tablet: 650px;
+	--mobile: 500px;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Ubuntu', sans-serif;
+
+}
+
+body{
+	background-image:url(bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+}
+
+header{
+	padding: 30px;
+}
+
+.logo{
+	float: left;
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+
+}
+
+.menu{
+	float: right;
+	/*display: none;*/
+}
+
+.menu li{
+	float: left;
+	/*margin: 0 20px;*/
+}
+
+li a{
+	display: block;
+	padding: 20px 35px;
+	/*border: 1px solid;*/
+	/*background-color: grey;*/
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover{
+	color: gold;
+}
+
+i{
+	font-size: 30px;
+	visibility: hidden;
+	color: #000;
+	cursor: pointer;
+}
+
+
+i:hover{
+	color: gold;
+	transform: rotate(180deg);
+	transition: 1s;
+}
+
+input{
+	display: none;
+}
+/**/
+
+
+
+
+/*media queries*/
+
+@media screen and (max-width:650px){
+	.logo{
+		margin-top: 10px;		
+	}
+
+	i{
+		float: right;
+		visibility: visible;
+	}
+
+	.menu{
+		display: none;
+		margin-top: 50px;
+	}
+
+	.menu li{
+		display: block;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		text-align: center;
+	}
+
+	li:hover{
+		background: gold;
+	}
+
+	li a{
+		color: gold;
+	}
+
+	a:hover{
+		font-weight: 700;
+		color: black;
+	}
+
+	input:checked ~ .menu{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		float: none;
+		transition: 30s;
+	}
+}
